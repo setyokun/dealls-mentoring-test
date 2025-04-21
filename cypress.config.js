@@ -3,7 +3,6 @@ const { defineConfig } = require('cypress');
 module.exports = defineConfig({
   projectId: 'bfzssc',
   e2e: {
-    browser: 'chrome',
     video: true,
     viewportWidth: 1280,
     viewportHeight: 720,

@@ -4,7 +4,7 @@
   "description": "dealls - mentoring test",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --headed",
+    "test": "npx cypress run",
     "lint": "eslint . --ext .js",
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write"

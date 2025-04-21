@@ -26,4 +26,7 @@ jobs:
 
       - name: Run Cypress Tests
         run: |
-          npx cypress run --headless --browser chrome
+          npm run test
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+  

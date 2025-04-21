@@ -29,13 +29,5 @@ jobs:
           npx cypress run --record
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-
-      - name: Upload Cypress Artifacts
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: cypress-artifacts
-          path: |
-            cypress/results/videos
-            cypress/results/screenshots   
+          
   

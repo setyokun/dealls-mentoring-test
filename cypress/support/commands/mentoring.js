@@ -14,8 +14,14 @@ Cypress.Commands.add('searchMentorByKeyword', (keyword) => {
  * Request to the first available mentor by searching for "Bisa Request" text
  */
 Cypress.Commands.add('requestAvailableMentor', () => {
-  cy.contains('Bisa Request').first().click();
+  mentoringPage.mentorCard().should('be.visible');
+  mentoringPage.chooseAvailableMentor()
+    .should('be.visible')
+    .first()
+    .click();
 
-  cy.contains('Ajukan Jadwal').click();
-  cy.log('✅ Berhasil request mentor pertama yang tersedia.');
+  mentoringPage.ajukanJadwalButton()
+    .should('be.visible')
+    .click();
 });
+

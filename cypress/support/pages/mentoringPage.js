@@ -11,6 +11,10 @@ class MentoringPage {
     return cy.get('#searchMentor');
   }
 
+  mentorCard() {
+    return cy.get('.MentorCard_mentor_card__zMRXB');
+  }
+  
   chooseAvailableMentor() {
     return cy.contains('div', 'Bisa Request');
   }

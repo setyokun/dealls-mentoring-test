@@ -1,6 +1,7 @@
 const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
+  projectId: 'bfzssc',
   e2e: {
     video: true,
     viewportWidth: 1280,
@@ -9,6 +10,7 @@ module.exports = defineConfig({
     videosFolder: 'cypress/results/videos',
     screenshotsFolder: 'cypress/results/screenshots',
     retries: 2,
+    defaultCommandTimeout: 10000,
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },

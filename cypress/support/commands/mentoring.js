@@ -17,7 +17,7 @@ Cypress.Commands.add('requestAvailableMentor', () => {
   mentoringPage.mentorCard().should('be.visible');
   mentoringPage.chooseAvailableMentor()
     .eq(0).should('be.visible')
-    .click();
+    .click({ force: true });
 
   mentoringPage.ajukanJadwalButton().should('be.visible').click();
 });

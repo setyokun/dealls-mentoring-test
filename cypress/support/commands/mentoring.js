@@ -15,13 +15,11 @@ Cypress.Commands.add('searchMentorByKeyword', (keyword) => {
  */
 Cypress.Commands.add('requestAvailableMentor', () => {
   mentoringPage.mentorCard().should('be.visible');
-  mentoringPage.chooseAvailableMentor()
+  mentoringPage
+    .chooseAvailableMentor()
+    .eq(0)
     .should('be.visible')
-    .first()
     .click();
 
-  mentoringPage.ajukanJadwalButton()
-    .should('be.visible')
-    .click();
+  mentoringPage.ajukanJadwalButton().should('be.visible').click();
 });
-

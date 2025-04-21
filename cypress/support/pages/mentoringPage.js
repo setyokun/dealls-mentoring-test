@@ -12,7 +12,7 @@ class MentoringPage {
   }
 
   mentorCard() {
-    return cy.get('.MentorCard_mentor_card__zMRXB');
+    return cy.get('.mt-4.gap-y-4');
   }
   
   chooseAvailableMentor() {

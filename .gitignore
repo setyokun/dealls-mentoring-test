@@ -1,0 +1,5 @@
+node_modules
+.DS_Store
+cypress/results/
+cypress/results/screenshots
+cypress/results/videos

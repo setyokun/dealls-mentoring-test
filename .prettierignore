@@ -1,0 +1,5 @@
+node_modules
+dist
+cypress/results/
+cypress/results/screenshots
+cypress/results/videos

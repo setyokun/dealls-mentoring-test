@@ -26,7 +26,7 @@ jobs:
 
       - name: Run Cypress Tests
         run: |
-          npm run test
+          npx cypress run --record
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
   

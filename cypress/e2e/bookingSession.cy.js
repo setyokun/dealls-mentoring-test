@@ -4,7 +4,8 @@ describe('Mentoring session booking', () => {
   });
 
   it('successfully books a session with an available mentor', () => {
-    cy.searchMentorByKeyword('career');
+    Cypress.env('Topics', 'Career Planning');
+    cy.searchMentor(Cypress.env('Topics'));
     cy.requestAvailableMentor();
     cy.fillScheduleStep();
     cy.fillPersonalInfo();

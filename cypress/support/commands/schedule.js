@@ -7,6 +7,7 @@ const saveScheduleData = () => {
   cy.saveTextToEnv('.rmdp-container', 'dateValue');
   cy.saveValueToEnv('#proposedTimes_0_startTime', 'startTimeValue');
   cy.saveValueToEnv('#proposedTimes_0_endTime', 'endDateValue');
+  cy.saveTextToEnv('.propose-location-select', 'locationValue');
   cy.saveValueToEnv('#notes', 'notesValue');
 };
 

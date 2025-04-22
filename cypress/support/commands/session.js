@@ -7,9 +7,11 @@ Cypress.Commands.add('verifySessionDetails', () => {
   const mentorNameText = Cypress.env('mentorNameText');
   const startTime = Cypress.env('startTimeValue');
   const endTime = Cypress.env('endDateValue');
+  const location = Cypress.env('locationValue');
   const notes = Cypress.env('notesValue');
   const startDate = '01';
   const endDate = '02 Jul 2025';
+  const topics = Cypress.env('Topics');
 
   cy.contains(mentorNameText).click();
   mySessionPage.header().should('contain', 'Pending');
@@ -21,6 +23,8 @@ Cypress.Commands.add('verifySessionDetails', () => {
     .should('include.text', startTime)
     .should('include.text', endTime)
     .should('include.text', startDate)
-    .should('include.text', endDate);
+    .should('include.text', endDate)
+    .should('include.text', location)
+    .should('include.text', topics);
   mySessionPage.detailNotes().should('include.text', notes);
 });

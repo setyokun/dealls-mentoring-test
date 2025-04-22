@@ -11,11 +11,6 @@ on:
   # Menambahkan trigger manual melalui GUI GitHub Actions
   workflow_dispatch:
     inputs: #
-      environment:
-        description: "Choose the environment to test" 
-        required: true 
-        default: "staging"
-        type: string
       browser:
         description: "Browser to run the tests"
         required: true

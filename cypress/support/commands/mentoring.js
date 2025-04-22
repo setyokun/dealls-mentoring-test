@@ -20,7 +20,7 @@ Cypress.Commands.add('requestAvailableMentor', () => {
     .should('be.visible')
     .should('contain.text', 'Career Planning')
     .contains('Bisa Request')
-    .click();
+    .dblclick();
 
   mentoringPage.mentorCard().should('not.exist');
 });

@@ -1,4 +1,4 @@
-name: Cypress Tests - Github Actions
+name: Dealls Mentoring Test - CI
 
 on:
   push:

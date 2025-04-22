@@ -22,5 +22,5 @@ Cypress.Commands.add('requestAvailableMentor', () => {
     .contains('Bisa Request')
     .click();
 
-  mentoringPage.ajukanJadwalButton().should('be.visible').click();
+  mentoringPage.mentorCard().should('not.exist');
 });

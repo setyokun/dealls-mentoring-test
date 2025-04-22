@@ -9,7 +9,7 @@ module.exports = defineConfig({
     baseUrl: 'https://job-portal-user-dev-skx7zw44dq-et.a.run.app',
     videosFolder: 'cypress/results/videos',
     screenshotsFolder: 'cypress/results/screenshots',
-    retries: 2,
+    // retries: 2,
     defaultCommandTimeout: 10000,
     setupNodeEvents(on, config) {
       // implement node event listeners here

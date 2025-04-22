@@ -15,6 +15,7 @@ const saveScheduleData = () => {
  * Fill the scheduling step with necessary details
  */
 Cypress.Commands.add('fillScheduleStep', () => {
+  mentoringPage.ajukanJadwalButton().should('be.visible').click();
   cy.saveTextToEnv('h1.font-bold', 'mentorNameText');
   mentoringPage.careerPlanningButton().click();
   mentoringPage.nextStep1().should('be.enabled').click();

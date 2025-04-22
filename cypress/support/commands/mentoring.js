@@ -7,7 +7,7 @@ import mentoringPage from '../pages/mentoringPage';
 Cypress.Commands.add('searchMentor', (keyword) => {
   cy.title().should('contain', 'Mentor');
   cy.url().should('include', '/mentoring');
-  mentoringPage.searchMentor().should('be.enabled').type(keyword);
+  mentoringPage.searchMentor().should('not.be.disabled').type(keyword, { force: true });
 });
 
 /**

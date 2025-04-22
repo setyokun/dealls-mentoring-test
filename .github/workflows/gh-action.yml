@@ -8,6 +8,24 @@ on:
     branches:
       - master 
 
+  # Menambahkan trigger manual melalui GUI GitHub Actions
+  workflow_dispatch:
+    inputs: #
+      environment:
+        description: "Choose the environment to test" 
+        required: true 
+        default: "staging"
+        type: string
+      browser:
+        description: "Browser to run the tests"
+        required: true
+        default: "chrome"
+        type: choice
+        options:
+          - chrome
+          - firefox
+          - edge
+
 jobs:
   cypress:
     runs-on: ubuntu-latest
@@ -26,8 +44,6 @@ jobs:
 
       - name: Run Cypress Tests
         run: |
-          npx cypress run --record --browser chrome
+          npx cypress run --record --browser ${{ inputs.browser || 'chrome' }}
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          
-  
